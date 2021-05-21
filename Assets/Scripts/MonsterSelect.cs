@@ -7,6 +7,7 @@ using TMPro;
 public class MonsterSelect : MonoBehaviour
 {
     private MonsterListSO monsterNames;
+    private BaseMonster monster;
 
     public TMP_Dropdown dropdown;
     private Text selectedMonster;
@@ -17,6 +18,7 @@ public class MonsterSelect : MonoBehaviour
 
     private void Start() {
         monsterNames = Resources.Load<MonsterListSO>("MonsterList");
+        monster = GetComponentInParent<BaseMonster>();
         PopulateList();
     }
 
@@ -25,6 +27,10 @@ public class MonsterSelect : MonoBehaviour
 
         dropdown.AddOptions(monsterNames.list);
         dropdown.RefreshShownValue();
-        dropdown.Show();
+    }
+
+    public void ChangeMonster() {
+        Debug.Log(monster.GetName());
+        monster.ChangeMonster(dropdown.options[dropdown.value].text);
     }
 }

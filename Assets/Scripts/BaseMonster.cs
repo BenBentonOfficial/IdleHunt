@@ -7,6 +7,8 @@ using TMPro;
 [RequireComponent(typeof(MasterButton))]
 public class BaseMonster : MonoBehaviour {
 
+    [SerializeField] protected MonsterSO monster;
+
     [SerializeField] protected string monsterName;
 
     [SerializeField] protected int hunterAmt = 0;
@@ -24,21 +26,31 @@ public class BaseMonster : MonoBehaviour {
     private bool startHunt = false;
 
     private void Awake() {
-        monsterResourceList = Resources.Load<ResourceTypeListSO>(monsterName + "PartList");
         textList = GetComponentsInChildren<TextMeshProUGUI>();
     }
 
     private void Start() {
         progressSlider = GetComponentInChildren<Slider>();
         //Debug.Log("there are " + textList.Length + " components");
-
-        UpdateText();
-
     }
 
     private void Update()
     {
         Hunt();
+    }
+
+    public void ChangeMonster(string name) {
+        monster = Resources.Load<MonsterSO>("MonsterSO/"+ name);
+
+        Debug.Log(monster.monsterName + " is now the selected monster");
+        
+
+        monsterName = monster.monsterName;
+        huntTimeMax = monster.huntTimeMax;
+        
+        monsterResourceList = Resources.Load<ResourceTypeListSO>(monsterName + "PartList");
+
+        UpdateText();
     }
 
     public string GetName() {
