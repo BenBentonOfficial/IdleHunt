@@ -8,7 +8,6 @@ public class MasterButton : MonoBehaviour
 
    private void Start() {
         monster = GetComponent<BaseMonster>();
-        Debug.Log(monster.GetName());
    }
 
    public void AddHunter() {

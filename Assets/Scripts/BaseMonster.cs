@@ -30,7 +30,7 @@ public class BaseMonster : MonoBehaviour {
 
     private void Start() {
         progressSlider = GetComponentInChildren<Slider>();
-        Debug.Log("there are " + textList.Length + " components");
+        //Debug.Log("there are " + textList.Length + " components");
 
         UpdateText();
 
@@ -104,7 +104,7 @@ public class BaseMonster : MonoBehaviour {
     }
 
     private void UpdateText() {
-        textList[0].text = monsterName;
+        //textList[0].text = monsterName;
         textList[1].text = "+";
         textList[2].text = "-";
         textList[3].text = "Hunters:";

@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.5882353}
+  m_Color: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1200,7 +1200,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2978629335633632382}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.5882353}
+  m_Color: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1602,6 +1602,7 @@ GameObject:
   - component: {fileID: 2978629335633632382}
   - component: {fileID: 2978629335633632368}
   - component: {fileID: 2978629335633632369}
+  - component: {fileID: 7133668127314462313}
   m_Layer: 5
   m_Name: MonsterPrefab
   m_TagString: Untagged
@@ -1620,8 +1621,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_Children:
-  - {fileID: 6990029662143645308}
   - {fileID: 2978629335398913036}
+  - {fileID: 6990029662143645308}
   - {fileID: 2978629335584377116}
   - {fileID: 2978629335808590504}
   - {fileID: 2978629335046466742}
@@ -1666,6 +1667,19 @@ MonoBehaviour:
   huntTime: 2
   currentHuntTimeMax: 2
   huntTimeMax: 15
+--- !u!114 &7133668127314462313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978629335633632383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b99dc817f8e14b0299ae9870b777180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 3156358458245827878}
 --- !u!1 &2978629335722698918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,6 +2812,7 @@ GameObject:
   - component: {fileID: 2821673880920561900}
   - component: {fileID: 954490507764783154}
   - component: {fileID: 3156358458245827878}
+  - component: {fileID: 6870728989731751898}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -2820,7 +2835,7 @@ RectTransform:
   - {fileID: 3023628984394559529}
   - {fileID: 5161576740341498487}
   m_Father: {fileID: 2978629335633632382}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2925,6 +2940,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
+--- !u!114 &6870728989731751898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315250148481240646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b99dc817f8e14b0299ae9870b777180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &8258330534747925935
 GameObject:
   m_ObjectHideFlags: 0
